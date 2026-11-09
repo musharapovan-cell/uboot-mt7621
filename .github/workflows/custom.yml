@@ -90,6 +90,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential bison flex swig python2
+          sudo apt-get install -y python2-dev || sudo apt-get install -y python2.7-dev || true
           sudo ln -sf /usr/bin/python2 /usr/local/bin/python
           python --version
       - name: Download OpenWrt toolchain
