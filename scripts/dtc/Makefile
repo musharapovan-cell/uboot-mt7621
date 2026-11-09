@@ -29,4 +29,4 @@ HOSTCFLAGS_dtc-parser.tab.o := $(HOSTCFLAGS_DTC)
 $(obj)/dtc-lexer.lex.o: $(obj)/dtc-parser.tab.h
 
 # Added for U-Boot
-subdir-$(CONFIG_PYLIBFDT) += pylibfdt
+# subdir-$(CONFIG_PYLIBFDT) += pylibfdt   # patched: no python on runner
