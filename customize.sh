@@ -116,6 +116,7 @@ else
 	echo "CONFIG_BAUDRATE=115200" >> ${DEFCONFIG}
 fi
 
+echo "# CONFIG_PYLIBFDT is not set" >> ${DEFCONFIG}
 make mt7621_build_defconfig
 make CROSS_COMPILE=${Toolchain} STAGING_DIR=${Staging}
 make savedefconfig
