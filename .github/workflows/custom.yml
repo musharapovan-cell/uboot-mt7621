@@ -89,7 +89,9 @@ jobs:
       - name: Install essential packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential bison flex swig python2 python-is-python2
+          sudo apt-get install -y build-essential bison flex swig python2 || sudo apt-get install -y build-essential bison flex swig
+          sudo ln -sf /usr/bin/python2 /usr/local/bin/python || true
+          python --version || true
           python --version || true
       - name: Download OpenWrt toolchain
         run: |
